@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cfa</Title>
+			<Shortcut>cfa</Shortcut>
+			<Description>
+			One line array parse
+			</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+				<Literal>
+				<ID>type</ID>
+				<Default>var</Default>
+				<ToolTip>Object type in array</ToolTip>
+				</Literal>
+		
+				<Literal>
+				<ID>name</ID>
+				<Default>name</Default>
+				<ToolTip>Name of the array</ToolTip>
+				</Literal>
+		
+				<Literal>
+				<ID>seperator</ID>
+				<Default> </Default>
+				<ToolTip>Seperator of the values parsed from console</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$type$[] $name$ = $SystemConsole$.ReadLine().Split('$seperator$').Select($type$.Parse).ToArray();
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
